@@ -28,14 +28,12 @@ public class Wordle {
         int i = 1;
         while(i <= 6) {
             
-            System.out.println("");
-            System.out.println("Enter guess #" +i);
+            System.out.println("\nEnter guess #" +i);
             guess = scan.nextLine().toUpperCase();
             
             if(guess.equals(key)) {
                 System.out.println(ANSI_GREEN_BACKGROUND + guess + ANSI_RESET);
-                System.out.println();
-                System.out.println("Guess is correct! The word was '" +key+"'");
+                System.out.println("\nGuess is correct! The word was '" +key+"'");
                 return;
             }
             
@@ -60,7 +58,6 @@ public class Wordle {
                 System.out.println("'"+guess+"' is not 5 letters long");
             }
         }
-        System.out.println("");
-        System.out.println("You have lost.. the word was '" +key+"'");
+        System.out.println("\nYou have lost.. the word was '" +key+"'");
     }
 }
